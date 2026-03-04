@@ -10,15 +10,15 @@ EDBM‑CME‑travel‑time‑prediction provides neural‑network travel‑time 
 CME_FINAL/
 ├── utils/
 │   ├── data_loading.py      # Data I/O, unit conversion, case classification
-│   ├── optimization.py      # EDBM parameter optimization (per propagation case)
+│   ├── optimization.py      # EDBM parameter 'a' optimization (per Case Cross-w (↘))
 │   └── augmentation.py      # Data augmentation and stratified splitting
 ├── models/
-│   ├── transit_time_nn.py   # Physics-informed neural network (Case Cross wind -)
+│   ├── transit_time_nn.py   # Physics-informed neural network (Case Case Cross-w (↘))
 │   └── classification.py    # Logistic regression classifiers (multi-class)
-├── run_optimization.py      # Script 1: optimize EDBM parameter 'a' per case
+├── run_optimization.py      # Script 1: optimize EDBM parameter 'a' per Case Cross-w (↘)
 ├── run_transit_time.py      # Script 2: train the transit time neural network
 ├── run_classification.py    # Script 3: train propagation-case classifiers
-└── visualization_results.ipynb  # Notebook: load results CSV and generate all figures
+└── results_visualization.ipynb  # Notebook: load results CSV and generate all figures
 ```
 
 ---
@@ -28,7 +28,7 @@ CME_FINAL/
 | File | Description |
 |---|---|
 | `Data/ICME_complete_dataset_rev.csv` | ICME observational catalog |
-| `Results/0_results_100_best.csv` | Pre-computed neural network results (visualization only) |
+| `Results/final_results.csv` | Pre-computed neural network results (visualization only) |
 
 ---
 
@@ -51,7 +51,7 @@ python run_transit_time.py
 ```
 
 Trains the physics-informed neural network over 25 independent realizations
-for Case Cross wind (-) events.  Results are saved to `results.csv`.
+for Case Cross-w (↘) events.  Results are saved to `Results/results.csv`.
 
 Requires: **TensorFlow 2.12**.
 
@@ -66,7 +66,7 @@ Trains logistic regression classifiers for 6-class classification of all propaga
 ### Visualization (no computation required)
 
 Open and run `visualization_results.ipynb`.  
-It reads `0_results_100_best.csv` and generates all figures from the paper.
+It reads `final_results.csv` and generates all figures from the paper.
 
 
 ---
