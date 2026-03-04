@@ -30,7 +30,6 @@ Place the following CSV files in the Data directory:
 | File | Description |
 |---|---|
 | `ICME_complete_dataset_rev.csv` | ICME observational catalog |
-| `CME_database_V3_1.csv` | CME fitting parameters (drag-based model) |
 | `0_results_100_best.csv` | Pre-computed neural network results (visualization only) |
 
 ---
