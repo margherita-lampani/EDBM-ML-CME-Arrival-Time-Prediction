@@ -13,7 +13,7 @@ CME_FINAL/
 │   ├── optimization.py      # EDBM parameter 'a' optimization (per Case Cross-w (↘))
 │   └── augmentation.py      # Data augmentation and stratified splitting
 ├── models/
-│   ├── transit_time_nn.py   # Physics-informed neural network (Case Case Cross-w (↘))
+│   ├── transit_time_nn.py   # Physics-informed neural network (Case Cross-w (↘))
 │   └── classification.py    # Logistic regression classifiers (multi-class)
 ├── run_optimization.py      # Script 1: optimize EDBM parameter 'a' per Case Cross-w (↘)
 ├── run_transit_time.py      # Script 2: train the transit time neural network
